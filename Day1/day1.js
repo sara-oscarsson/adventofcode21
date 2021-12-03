@@ -1,3 +1,4 @@
+//Part One
 const fs = require('fs');
 
 //Read file with all the input and turn it into a string
@@ -21,3 +22,18 @@ for (let i = 0; i < myArray.length; i++) {
 
 console.log(`The answer to day one is: ${ counter }`);
 
+//Part Two
+
+let counter2 = 0;
+
+for (let i = 0; i < myArray.length; i++) {
+    let a = myArray[i] + myArray[i + 1] + myArray[i + 2];
+    let b = myArray[i + 1] + myArray[i + 2] + myArray[i + 3];
+
+    if(b > a) {
+        counter2++;
+    }
+    
+}
+
+console.log(`The answer to day two is: ${ counter2 }`);
