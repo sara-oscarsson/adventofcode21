@@ -20,7 +20,7 @@ for (let i = 0; i < myArray.length; i++) {
     
 }
 
-console.log(`The answer to day one is: ${ counter }`);
+console.log(`The answer to day one part one is: ${ counter }`);
 
 //Part Two
 
@@ -36,4 +36,4 @@ for (let i = 0; i < myArray.length; i++) {
     
 }
 
-console.log(`The answer to day two is: ${ counter2 }`);
+console.log(`The answer to day one part two is: ${ counter2 }`);
