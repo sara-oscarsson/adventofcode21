@@ -2,9 +2,8 @@ let fs = require('fs');
 let inputMovement = fs.readFileSync('./input.txt', 'utf8').trim();
 
 let myArray = inputMovement.split('\n');
-/* console.log(myArray); */
-
 let ArrObj = [];
+
 //For every input i create an object 
 myArray.forEach(input => {
     //Creates an array with a the command first and then a number
@@ -35,4 +34,26 @@ ArrObj.forEach(movement => {
     
 })
 let answer = positionH * positionD;
-console.log(`The answe to day2 part one is ${answer}`);
+console.log(`The answe to day2 part one is ${ answer }`);
+
+/* Part two */
+
+let horizontal = 0;
+let depth = 0;
+let aim = 0;
+
+ArrObj.forEach(move => {
+    if(move.command == 'down') {
+        aim += move.speed;
+    }
+    if(move.command == 'up') {
+        aim -= move.speed;
+    }
+    if(move.command == 'forward') {
+        horizontal += move.speed;
+        depth += move.speed * aim;
+    }
+})
+
+let answer2 = horizontal * depth;
+console.log(`The answer to day2 part two is ${ answer2 }`)
